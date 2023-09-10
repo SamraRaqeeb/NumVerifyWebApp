@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone Number Info</title>
+</head>
+<body>
+    <h1>Phone Number Information</h1>
+    <form method="POST" action="/">
+        <label for="number">Enter Phone Number Start With +__:</label>
+        <input type="text" id="number" name="number" required>
+        <br>
+
+        <!-- Number formatting options -->
+        <label for="format">Number Format:</label>
+        <select id="format" name="format">
+            <option value="international">International Format</option>
+            <option value="national">National Format</option>
+        </select>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
